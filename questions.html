@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Demand Predection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <style>
+    :root {
+      --clr-green: #B8E2B4;
+      --clr-black: #0E0E0E;
+      --clr-darkgreen: #1FA725;
+      --clr-footer: #202338;
+    }
+
+    .textclr { color: var(--clr-black); }
+    .green { color: var(--clr-green); }
+    .darkgreen { color: var(--clr-darkgreen); }
+
+    body {
+      background-color: var(--clr-green);
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p { font-size: 18px; }
+
+    .appname {
+      letter-spacing: 0.14em;
+      margin-inline: auto;
+      text-align: center;
+      height: 60px;
+      border-bottom: 2px solid var(--clr-purple); /* You haven't defined clr-purple */
+      padding-bottom: 0em;
+      padding-top: 0.9em;
+      margin-bottom: 1em;
+    }
+
+    main {
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: space-evenly;
+      width: 1200px;
+      max-width: 1200px;
+      padding-bottom: 2em;
+      margin-bottom: 4em;
+      border-radius: 20px;
+    }
+
+    .info-section {
+      width: 100%;
+      height: 60%;
+    }
+
+    .info-desc {
+      width: 70%;
+      display: block;
+      margin-inline: auto;
+      padding-top: 4em;
+    }
+
+    .start-btn {
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      width: 210px;
+      margin-inline: auto;
+      margin-top: 2.5em;
+      display: block;
+    }
+
+    footer {
+      height: 100px;
+      width: 100%;
+      background-color: var(--clr-footer);
+      text-align: center;
+      bottom: 0;
+      position: relative;
+    }
+
+    footer > p {
+      font-weight: 600;
+      font-size: 20px;
+      color: #FFFFFF;
+      padding-top: 0.7em;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<h1 class="appname textclr">Demand prediction </h1>
+ <main class="login">
+    <form action="{{ url_for('predict')}}"method="post">
+        <div class="question-container">
+          <p class="question textclr">Region</p>
+    	    <input class="age-input textclr" type="number" name="num_rooms" placeholder="Enter Region" required="required" />
+        </div>
+        <br><br>
+        <div class="question-container">
+        <p class="question textclr">Select a date:</p>
+        <input class="date-input textclr" type="date" name="selected_date" required="required" />
+        </div>
+        <div class="question-container">
+          <p class="question textclr">Product ID</p>
+          <input class="age-input textclr" type="string" name="housearea" placeholder="Enter ID" required="required" />
+        </div>
+        <br><br>
+
+       
+
+       
+
+        <button type="submit" class="btn-submit" onclick="window.location.href='{{ url_for('predict') }}';">Get Results</button>
+    </form>
+  </main>
+ <footer>
+  </p>
+ </footer>
+
+</body>
+</html>

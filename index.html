@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Electricity Consumption Prediction for Household</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-green: #B8E2B4;
+      --clr-black: #0E0E0E;
+      --clr-darkgreen: #1FA725;
+      --clr-footer: #202338;
+    }
+
+    .textclr { color: var(--clr-black); }
+    .green { color: var(--clr-green); }
+    .darkgreen { color: var(--clr-darkgreen); }
+
+    body {
+      background-color: var(--clr-green);
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p { font-size: 18px; }
+
+    .appname {
+      letter-spacing: 0.14em;
+      margin-inline: auto;
+      text-align: center;
+      height: 60px;
+      border-bottom: 2px solid var(--clr-purple); /* You haven't defined clr-purple */
+      padding-bottom: 0em;
+      padding-top: 0.9em;
+      margin-bottom: 1em;
+    }
+
+    main {
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: space-evenly;
+      width: 1200px;
+      max-width: 1200px;
+      padding-bottom: 2em;
+      margin-bottom: 4em;
+      border-radius: 20px;
+    }
+
+    .info-section {
+      width: 100%;
+      height: 60%;
+    }
+
+    .info-desc {
+      width: 70%;
+      display: block;
+      margin-inline: auto;
+      padding-top: 4em;
+    }
+
+    .start-btn {
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      width: 210px;
+      margin-inline: auto;
+      margin-top: 2.5em;
+      display: block;
+    }
+
+    footer {
+      height: 100px;
+      width: 100%;
+      background-color: var(--clr-footer);
+      text-align: center;
+      bottom: 0;
+      position: relative;
+    }
+
+    footer > p {
+      font-weight: 600;
+      font-size: 20px;
+      color: #FFFFFF;
+      padding-top: 0.7em;
+      letter-spacing: 0.04em;
+    }
+
+    <style>
+      .button {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+  </style>
+</head>
+<body>
+  <h1 class="appname textclr">Electricity Consumption Prediction for Household</h1>
+  <main>
+    <section class="info-section">
+      <div class="info-desc">
+        <p class="textclr">- The project aims to contribute to the development of practical solutions for energy management at home.</p>
+        <p class="textclr">- Electricity consumption prediction models offer a wide range of benefits, from assisting homeowners in making informed decisions about their energy usage to enabling utility companies to optimize resource allocation and improve grid efficiency</p>
+        <p class="textclr">This is an easy assessment aimed at predicting the monthly electricity bill, requires a few minutes to complete and provides you an instant prediction.</p>
+      </div>
+      <button class="start-btn" type="button" onclick="window.location.href='{{ url_for('questions') }}';">Start Assessment</button>
+    </section>
+  </main>
+  <a href="questions.html" class="button"> next</a>
+  
+ 
+</body>
+</html>

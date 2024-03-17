@@ -1,0 +1,13 @@
+For this project you need to install
+
+matplotlib==3.8.3
+numpy==1.26.4
+pandas==2.2.1
+scikit_learn==1.4.1
+
+For installing these pakages just go into your IDE terminal or command prompt and follow below steps:-
+
+pip install matplotlib
+pip install numpy
+pip install pandas
+pip install pip install scikit-learn
